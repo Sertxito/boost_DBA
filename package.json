@@ -1,0 +1,75 @@
+{
+  "name": "mcpee-dba",
+  "version": "0.1.0",
+  "description": "Boost DBA 360: agents, skills, specs, patterns and templates for expert SQL Server operations and modernization.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./mcpee": "./mcpee.json"
+  },
+  "files": [
+    "mcpee.json",
+    "platform.json",
+    "agents",
+    "specs",
+    "skills",
+    "patterns",
+    "references",
+    "examples",
+    "templates",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "validate:json": "node -e \"const fs=require('fs'); JSON.parse(fs.readFileSync('mcpee.json','utf8')); JSON.parse(fs.readFileSync('platform.json','utf8')); console.log('JSON metadata OK');\"",
+    "quality": "npm run validate:json",
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
+  },
+  "keywords": [
+    "mcpee",
+    "boost",
+    "dba",
+    "sql-server",
+    "modernization",
+    "agents",
+    "skills",
+    "specs"
+  ],
+  "author": "Sergio Hierro Cinos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sertxito/boostDBA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sertxito/boostDBA/issues"
+  },
+  "homepage": "https://github.com/Sertxito/boostDBA#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@mcpee/core": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@mcpee/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.3.5",
+    "@semantic-release/npm": "^11.0.3",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "semantic-release": "^24.2.7"
+  }
+}

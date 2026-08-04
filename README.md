@@ -7,12 +7,12 @@
 
 ## Overview
 
-Sistema agentico completo para operar, auditar y modernizar SQL Server **sin exfiltración de datos sensibles**. 17 agentes especializados + 17 skills para DBA operations, performance troubleshooting, security audits, y planificación de modernización.
+Sistema agentico completo para operar, auditar y modernizar SQL Server **sin exfiltración de datos sensibles**. 18 agentes especializados + 19 skills para DBA operations, performance troubleshooting, security audits, y planificación de modernización.
 
 ### Key Features
 
-- ✅ **17 Agentes Especializados** — Index Expert, Query Analyzer, Security Auditor, Modernization Planner
-- ✅ **17 Skills Alineados** — Cada skill mapea a un dominio específico de SQL
+- ✅ **18 Agentes Especializados** — Index Expert, Query Analyzer, Security Auditor, Modernization Planner
+- ✅ **19 Skills Alineados** — Cada skill mapea a un dominio específico de SQL
 - ✅ **Modes Lean & Full** — Lean (orquestador + analizador + reportes); Full (auditorías amplias)
 - ✅ **Anonimización Obligatoria** — Wizard con ask/yes/no para proteger datos sensibles
 - ✅ **Detección de Deuda Técnica** — Dependencias ocultas, índices no usados, queries lentas
@@ -46,12 +46,13 @@ cd boostDBA
 
 ## Documentation
 
-- [Architecture & Design](docs/ARCHITECTURE.md)
-- [Agent Registry](docs/AGENTS.md)
-- [Installation Guide](INSTALL.md)
-- [Usage Modes](docs/USAGE_MODES.md)
-- [Security & Compliance](docs/SECURITY.md)
+- [Boost DBA 360 Guide](docs/README.md)
+- [Agent Behavioral Spec](specs/agent-behavioral-spec.md)
+- [Session Framing Guide](specs/session-framing-guide.md)
+- [Skills Catalog](skills/)
+- [Agents Catalog](agents/)
 
 ## License
 
 MIT — See [LICENSE](LICENSE)
+

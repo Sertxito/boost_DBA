@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "name": "mcpee-dba",
+  "version": "0.1.0",
+  "type": "boost",
+  "domain": "dba",
+  "description": "Boost DBA 360 package catalog for SQL Server analysis, reliability, performance and modernization workflows.",
+  "catalog": {
+    "agents": "agents/",
+    "skills": "skills/",
+    "specs": "specs/",
+    "patterns": "patterns/",
+    "references": "references/",
+    "templates": "templates/",
+    "examples": "examples/",
+    "platform": "platform.json"
+  },
+  "coreSpecs": [
+    "specs/agent-behavioral-spec.md",
+    "specs/session-framing-guide.md"
+  ],
+  "coreSkillSet": [
+    "skills/secure-onboarding/SKILL.md",
+    "skills/database-analysis/SKILL.md",
+    "skills/dependency-impact/SKILL.md",
+    "skills/performance-diagnostics/SKILL.md",
+    "skills/query-optimization/SKILL.md",
+    "skills/dba-governance/SKILL.md",
+    "skills/proactive-maintenance/SKILL.md",
+    "skills/capacity-planning/SKILL.md",
+    "skills/monitoring-baseline/SKILL.md",
+    "skills/jobs-automation/SKILL.md",
+    "skills/high-availability/SKILL.md",
+    "skills/migration-scripting/SKILL.md",
+    "skills/test-data-generation/SKILL.md",
+    "skills/security-loop/SKILL.md",
+    "skills/human-in-the-loop/SKILL.md",
+    "skills/cross-platform-validation/SKILL.md",
+    "skills/documentation-recovery/SKILL.md",
+    "skills/sp-to-application-migration/SKILL.md",
+    "skills/sql-anonymization/SKILL.md"
+  ],
+  "notes": [
+    "This file is intentionally lightweight and references existing artifact families.",
+    "Detailed agent and use-case mapping is maintained in platform.json."
+  ]
+}

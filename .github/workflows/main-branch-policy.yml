@@ -1,0 +1,40 @@
+name: Main Branch Policy
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  require-pr-associated-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ensure commit is associated with at least one PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const commitSha = context.sha;
+
+            const response = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+              owner,
+              repo,
+              commit_sha: commitSha,
+            });
+
+            if (!response.data || response.data.length === 0) {
+              core.setFailed(
+                `Direct push detected on main for commit ${commitSha}. ` +
+                `All changes must reach main through a pull request.`
+              );
+              return;
+            }
+
+            core.info(
+              `Policy check passed. Commit ${commitSha} is linked to PR(s): ` +
+              response.data.map((pr) => `#${pr.number}`).join(", ")
+            );

@@ -1,0 +1,454 @@
+{
+  "name": "Boost DBA 360",
+  "tagline": "Plataforma IA para analisis, rendimiento, mantenimiento, seguridad, HA y modernizacion completa de SQL Server",
+  "version": "1.0.0",
+  "agents": [
+    {
+      "id": "dba-360-orchestrator",
+      "name": "Orquestador DBA 360",
+      "description": "Conduce una sesion DBA integral con security-first y entregables estandar",
+      "file": "agents/dba-360-orchestrator.agent.md",
+      "useCases": [
+        "Necesito una evaluacion DBA completa de extremo a extremo",
+        "Prioriza quick wins de rendimiento, riesgo y modernizacion",
+        "Genera informe ejecutivo tecnico para direccion"
+      ]
+    },
+    {
+      "id": "db-dependency-analyzer",
+      "name": "Analizador de Dependencias de BD",
+      "description": "Mapea todas las dependencias en bases de datos SQL Server",
+      "file": "agents/db-dependency-analyzer.agent.md",
+      "useCases": [
+        "¿Cuáles procedimientos son realmente críticos?",
+        "¿Cuáles objetos tienen cero dependencias (código muerto)?",
+        "Muéstrame la cadena de llamadas para el procedimiento X"
+      ]
+    },
+    {
+      "id": "legacy-logic-extractor",
+      "name": "Extractor de Lógica Legacy",
+      "description": "Extrae lógica de negocio de stored procedures",
+      "file": "agents/legacy-logic-extractor.agent.md",
+      "useCases": [
+        "¿Cuál lógica de negocio está enterrada en este procedimiento?",
+        "¿Dónde está implementada esta regla?",
+        "¿Cuáles son todas las reglas de descuento/comisión?"
+      ]
+    },
+    {
+      "id": "change-impact-assessor",
+      "name": "Evaluador de Impacto de Cambios",
+      "description": "Evalúa el impacto de cambios propuestos en la base de datos",
+      "file": "agents/change-impact-assessor.agent.md",
+      "useCases": [
+        "¿Es seguro renombrar esta tabla?",
+        "¿Qué se romperá si removemos este procedimiento?",
+        "¿Cuál es la estrategia de prueba para este cambio?"
+      ]
+    },
+    {
+      "id": "db-documentation-generator",
+      "name": "Generador de Documentación de BD",
+      "description": "Auto-genera documentación a partir del código de base de datos",
+      "file": "agents/db-documentation-generator.agent.md",
+      "useCases": [
+        "Crea documentación para esta base de datos",
+        "Genera runbooks para procedimientos críticos",
+        "Crea diccionario de datos y diagramas ER"
+      ]
+    },
+    {
+      "id": "modernization-orchestrator",
+      "name": "Orquestador de Modernización",
+      "description": "Orquesta el viaje completo de modernización de BD",
+      "file": "agents/modernization-orchestrator.agent.md",
+      "useCases": [
+        "Ayúdanos a modernizar esta base de datos de forma segura",
+        "Tenemos 5000 procedimientos - ¿por dónde empezamos?",
+        "Crea un roadmap de modernización de 12 meses"
+      ]
+    },
+    {
+      "id": "performance-bottleneck-analyzer",
+      "name": "Analizador de Cuellos de Botella",
+      "description": "Diagnostica problemas de rendimiento con waits, bloqueos y consultas top",
+      "file": "agents/performance-bottleneck-analyzer.agent.md",
+      "useCases": [
+        "¿Dónde está el cuello de botella principal?",
+        "¿Por qué tenemos timeouts en hora pico?",
+        "¿Qué consultas consumen más CPU e IO?"
+      ]
+    },
+    {
+      "id": "query-optimizer",
+      "name": "Optimizador de Consultas SQL",
+      "description": "Optimiza consultas, planes de ejecución e índices con control de riesgo",
+      "file": "agents/query-optimizer.agent.md",
+      "useCases": [
+        "Optimiza este stored procedure crítico",
+        "Reducir costo de consulta sin romper funcionalidad",
+        "Resolver regresión de plan después de un despliegue"
+      ]
+    },
+    {
+      "id": "dba-reliability-security-advisor",
+      "name": "Asesor DBA de Fiabilidad y Seguridad",
+      "description": "Audita continuidad operativa, seguridad y hardening de SQL Server",
+      "file": "agents/dba-reliability-security-advisor.agent.md",
+      "useCases": [
+        "Evalúa riesgos DBA de seguridad y continuidad",
+        "Revisa permisos y privilegios excesivos",
+        "Valida estrategia de backup y recuperación"
+      ]
+    },
+    {
+      "id": "proactive-maintenance-advisor",
+      "name": "Asesor de Mantenimiento Proactivo",
+      "description": "Detecta índices fragmentados, estadísticas obsoletas e índices sin uso con plan de mantenimiento",
+      "file": "agents/proactive-maintenance-advisor.agent.md",
+      "useCases": [
+        "¿Qué índices necesitan mantenimiento urgente?",
+        "Genera el plan de mantenimiento semanal",
+        "Los planes de ejecución empeoraron, ¿son las estadísticas?"
+      ]
+    },
+    {
+      "id": "capacity-planning-advisor",
+      "name": "Asesor de Capacity Planning",
+      "description": "Analiza crecimiento de datos y proyecta almacenamiento a 3/6/12 meses",
+      "file": "agents/capacity-planning-advisor.agent.md",
+      "useCases": [
+        "¿Cuándo nos quedamos sin espacio en disco?",
+        "¿Qué tablas están creciendo más rápido?",
+        "Planifica el almacenamiento para los próximos 12 meses"
+      ]
+    },
+    {
+      "id": "monitoring-baseline-advisor",
+      "name": "Asesor de Monitorización y Baseline",
+      "description": "Establece baseline de comportamiento normal y detecta desviaciones en SQL Server",
+      "file": "agents/monitoring-baseline-advisor.agent.md",
+      "useCases": [
+        "¿Esto que vemos es normal o una anomalía?",
+        "Define los umbrales de alerta para nuestra BD",
+        "Genera el informe de salud semanal"
+      ]
+    },
+    {
+      "id": "sql-agent-jobs-analyzer",
+      "name": "Analizador de Jobs y Automatización SQL",
+      "description": "Audita SQL Agent jobs, detecta fallos, solapamientos y jobs obsoletos",
+      "file": "agents/sql-agent-jobs-analyzer.agent.md",
+      "useCases": [
+        "¿Qué jobs fallaron esta semana?",
+        "¿Hay jobs que se solapan y compiten por CPU?",
+        "Audita todos los jobs de mantenimiento nocturno"
+      ]
+    },
+    {
+      "id": "high-availability-advisor",
+      "name": "Asesor de Alta Disponibilidad",
+      "description": "Evalúa AlwaysOn, replicación y log shipping, calcula RTO/RPO real y genera runbook de failover",
+      "file": "agents/high-availability-advisor.agent.md",
+      "useCases": [
+        "¿Nuestro AlwaysOn está bien configurado?",
+        "¿Cuál es nuestro RPO real con la configuración actual?",
+        "Genera el runbook de failover para el equipo"
+      ]
+    },
+    {
+      "id": "migration-script-generator",
+      "name": "Generador de Scripts de Migración",
+      "description": "Genera scripts DDL/DML seguros con rollback, validaciones y plan de despliegue",
+      "file": "agents/migration-script-generator.agent.md",
+      "useCases": [
+        "Genera el script para añadir esta columna con su rollback",
+        "Crea el plan de migración para renombrar esta tabla",
+        "Genera el checklist de go/no-go para este cambio"
+      ]
+    },
+    {
+      "id": "test-data-generator",
+      "name": "Generador de Datos de Prueba",
+      "description": "Genera datos sintéticos realistas y anonimiza subconjuntos de producción para testing",
+      "file": "agents/test-data-generator.agent.md",
+      "useCases": [
+        "Genera un juego de datos de prueba para staging",
+        "Anonimiza este subconjunto de producción para los desarrolladores",
+        "Crea datos que cubran los casos extremos de este SP"
+      ]
+    },
+    {
+      "id": "cross-platform-advisor",
+      "name": "Asesor Cross-Platform de Bases de Datos",
+      "description": "Valida recomendaciones contra documentación oficial y guía decisiones entre SQL Server, Azure SQL, PostgreSQL, AWS RDS y Cosmos DB",
+      "file": "agents/cross-platform-advisor.agent.md",
+      "useCases": [
+        "¿Esta recomendación aplica igual en Azure SQL que en SQL Server?",
+        "Queremos migrar de SQL Server a PostgreSQL, ¿qué debemos saber?",
+        "Valida esta configuración contra la documentación oficial del proveedor"
+      ]
+    },
+    {
+      "id": "executive-report-exporter",
+      "name": "Asesor de Entrega — Consultor DBA/Negocio",
+      "description": "Traduce hallazgos tecnicos a lenguaje de negocio y exporta entregables profesionales en .docx",
+      "file": "agents/executive-report-exporter.agent.md",
+      "useCases": [
+        "Genera el paquete ejecutivo final para cliente",
+        "Convierte hallazgos tecnicos en narrativa de negocio",
+        "Exporta informes profesionales en Word con trazabilidad"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "database-analysis",
+      "name": "Análisis de Base de Datos",
+      "description": "Extrae schema, procedimientos, metadatos de SQL Server",
+      "path": "skills/database-analysis/SKILL.md"
+    },
+    {
+      "id": "dependency-impact",
+      "name": "Análisis de Impacto de Dependencias",
+      "description": "Mapea dependencias y evalúa impacto de cambios",
+      "path": "skills/dependency-impact/SKILL.md"
+    },
+    {
+      "id": "documentation-recovery",
+      "name": "Recuperación de Documentación",
+      "description": "Genera documentación faltante a partir del código",
+      "path": "skills/documentation-recovery/SKILL.md"
+    },
+    {
+      "id": "performance-diagnostics",
+      "name": "Diagnóstico de Rendimiento",
+      "description": "Detecta cuellos de botella de CPU, IO, waits, bloqueos y regresiones",
+      "path": "skills/performance-diagnostics/SKILL.md"
+    },
+    {
+      "id": "query-optimization",
+      "name": "Optimización de Consultas",
+      "description": "Tuning de SQL, planes e índices con pruebas de regresión",
+      "path": "skills/query-optimization/SKILL.md"
+    },
+    {
+      "id": "dba-governance",
+      "name": "Gobierno DBA",
+      "description": "Audita seguridad, continuidad y operación de base de datos",
+      "path": "skills/dba-governance/SKILL.md"
+    },
+    {
+      "id": "secure-onboarding",
+      "name": "Onboarding Seguro y Fuente de Verdad",
+      "description": "Arranca proyectos DBA desde cero con fuente local y preflight de seguridad",
+      "path": "skills/secure-onboarding/SKILL.md"
+    },
+    {
+      "id": "proactive-maintenance",
+      "name": "Mantenimiento Proactivo",
+      "description": "Detecta fragmentación, estadísticas obsoletas e índices problemáticos con scripts listos",
+      "path": "skills/proactive-maintenance/SKILL.md"
+    },
+    {
+      "id": "capacity-planning",
+      "name": "Capacity Planning",
+      "description": "Analiza tendencias de crecimiento y proyecta almacenamiento y recursos",
+      "path": "skills/capacity-planning/SKILL.md"
+    },
+    {
+      "id": "monitoring-baseline",
+      "name": "Monitorización y Baseline",
+      "description": "Baseline de métricas, detección de anomalías y umbrales de alerta",
+      "path": "skills/monitoring-baseline/SKILL.md"
+    },
+    {
+      "id": "jobs-automation",
+      "name": "Jobs y Automatización SQL",
+      "description": "Inventario de SQL Agent jobs, fallos, solapamientos y optimización de schedules",
+      "path": "skills/jobs-automation/SKILL.md"
+    },
+    {
+      "id": "high-availability",
+      "name": "Alta Disponibilidad y DR",
+      "description": "Valida AlwaysOn, replicación, RTO/RPO y genera runbooks de failover",
+      "path": "skills/high-availability/SKILL.md"
+    },
+    {
+      "id": "migration-scripting",
+      "name": "Scripts de Migración Seguros",
+      "description": "Estructura estándar para DDL/DML con rollback, pre/post checks y plan de despliegue",
+      "path": "skills/migration-scripting/SKILL.md"
+    },
+    {
+      "id": "test-data-generation",
+      "name": "Generación de Datos de Prueba",
+      "description": "Datos sintéticos respetando constraints y anonimización de datos sensibles",
+      "path": "skills/test-data-generation/SKILL.md"
+    },
+    {
+      "id": "human-in-the-loop",
+      "name": "Human-in-the-Loop",
+      "description": "Compuerta de decision humana: autonomo, requiere confirmacion o bloqueado segun impacto",
+      "path": "skills/human-in-the-loop/SKILL.md"
+    },
+    {
+      "id": "security-loop",
+      "name": "Security Loop Continuo",
+      "description": "Compuerta de seguridad embebida en cada fase del ciclo de analisis",
+      "path": "skills/security-loop/SKILL.md"
+    },
+    {
+      "id": "cross-platform-validation",
+      "name": "Validacion Cross-Platform",
+      "description": "Contrasta recomendaciones con documentacion oficial y mapea equivalencias entre plataformas",
+      "path": "skills/cross-platform-validation/SKILL.md"
+    },
+    {
+      "id": "sp-to-application-migration",
+      "name": "Migracion de SP a Aplicacion",
+      "description": "Extrae logica de negocio de SPs hacia capa de aplicacion con estrategia Strangler Fig",
+      "path": "skills/sp-to-application-migration/SKILL.md"
+    },
+    {
+      "id": "sql-anonymization",
+      "name": "Anonimizacion SQL",
+      "description": "Anonimiza esquemas y artefactos para evitar exfiltracion de datos sensibles",
+      "path": "skills/sql-anonymization/SKILL.md"
+    }
+  ],
+  "examples": [
+    {
+      "name": "Base de Datos ERP Heredada",
+      "description": "Base de datos SQL Server realista con problemas típicos heredados",
+      "path": "examples/legacy-sql-server/",
+      "files": [
+        "erp-database.sql - Crea base de datos de prueba",
+        "analysis-queries.sql - Queries de análisis pre-hechas",
+        "README.md - Recorrido de caso de estudio"
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "name": "Plan de Modernización",
+      "file": "templates/modernization/migration-plan.md"
+    },
+    {
+      "name": "Análisis de Impacto",
+      "file": "templates/modernization/impact-analysis-template.md"
+    },
+    {
+      "name": "Documentación",
+      "file": "templates/modernization/documentation-template.md"
+    },
+    {
+      "name": "Informe DBA 360",
+      "file": "templates/reports/dba-360-assessment-template.md"
+    },
+    {
+      "name": "Informe Cuellos de Botella",
+      "file": "templates/reports/performance-bottleneck-report-template.md"
+    },
+    {
+      "name": "Auditoria Seguridad y Fiabilidad",
+      "file": "templates/reports/security-reliability-audit-template.md"
+    },
+    {
+      "name": "Informe Mantenimiento Proactivo",
+      "file": "templates/reports/proactive-maintenance-report-template.md"
+    },
+    {
+      "name": "Informe Capacity Planning",
+      "file": "templates/reports/capacity-planning-report-template.md"
+    },
+    {
+      "name": "Informe Monitorización y Baseline",
+      "file": "templates/reports/monitoring-baseline-report-template.md"
+    },
+    {
+      "name": "Informe Jobs y Automatización",
+      "file": "templates/reports/jobs-automation-report-template.md"
+    },
+    {
+      "name": "Informe Alta Disponibilidad y DR",
+      "file": "templates/reports/high-availability-report-template.md"
+    },
+    {
+      "name": "Informe de Modernización",
+      "file": "templates/reports/modernization-report-template.md"
+    },
+    {
+      "name": "Informe Dependencias e Impacto",
+      "file": "templates/reports/dependency-impact-report-template.md"
+    }
+  ],
+  "knowledge": [
+    {
+      "topic": "Anti-Patrones Comunes",
+      "index": "patterns/README.md",
+      "patterns": [
+        { "file": "patterns/logica-negocio-dispersa.md",      "categoria": "Mantenibilidad" },
+        { "file": "patterns/dependencias-implicitas.md",        "categoria": "Trazabilidad" },
+        { "file": "patterns/codigo-muerto.md",                  "categoria": "Deuda técnica" },
+        { "file": "patterns/valores-hardcoded.md",              "categoria": "Mantenibilidad" },
+        { "file": "patterns/procedimientos-complejos.md",       "categoria": "Mantenibilidad" },
+        { "file": "patterns/indices-faltantes.md",              "categoria": "Rendimiento" },
+        { "file": "patterns/sin-auditoria.md",                  "categoria": "Gobierno" },
+        { "file": "patterns/cursores-vs-set-based.md",          "categoria": "Rendimiento" },
+        { "file": "patterns/transacciones-sin-cierre.md",       "categoria": "Estabilidad" },
+        { "file": "patterns/parameter-sniffing.md",             "categoria": "Rendimiento" },
+        { "file": "patterns/tablas-sin-pk.md",                  "categoria": "Integridad" },
+        { "file": "patterns/triggers-cascada.md",               "categoria": "Trazabilidad" },
+        { "file": "patterns/dynamic-sql-sin-parametrizar.md",   "categoria": "Seguridad" }
+      ]
+    },
+    {
+      "topic": "Referencias Oficiales",
+      "file": "references/official-docs.md",
+      "includes": [
+        "SQL Server",
+        "Azure SQL",
+        "AWS RDS / Aurora",
+        "PostgreSQL",
+        "Cosmos DB"
+      ]
+    },
+    {
+      "topic": "Especificación de Comportamiento",
+      "file": "specs/agent-behavioral-spec.md",
+      "includes": [
+        "anti-alucinación",
+        "niveles de confianza",
+        "hecho vs interpretación",
+        "escalado HITL"
+      ]
+    },
+    {
+      "topic": "Encuadre de Sesión",
+      "file": "specs/session-framing-guide.md",
+      "includes": [
+        "plantilla de contexto",
+        "modos de sesión",
+        "reencuadre",
+        "cierre de sesión"
+      ]
+    }
+  ],
+  "quickStart": {
+    "step1": "Arranca wizard: pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName MiProyecto -SchemaPath C:\\schemas",
+    "step2": "Pregunta al agente: 'Haz una evaluación DBA 360 sobre workspaces/MiProyecto'",
+    "step3": "Revisa dependencias, lógica de negocio, riesgos de cambio y compuertas HITL",
+    "step4": "Analiza cuellos de botella, mantenimiento, HA y optimización de consultas",
+    "step5": "Genera roadmap, informes estandarizados y plan de gobierno DBA"
+  },
+  "benefits": {
+    "timeReduction": "Acelera diagnostico y priorizacion de semanas a horas",
+    "riskReduction": "Reduce cambios a ciegas con impacto y rollback definidos",
+    "performance": "Mejora consultas y cuellos de botella con evidencia medible",
+    "security": "Eleva madurez de seguridad y continuidad operativa",
+    "modernization": "Convierte negocio en SP hacia arquitectura moderna por fases"
+  }
+}
+
