@@ -11,3 +11,7 @@ input/
 
 # Token usage logs locales (no versionar, solo el MD)
 .github/reports/token-usage-history.json
+
+# Dependencias y lockfile locales de npm (no versionar en este repo)
+node_modules/
+package-lock.json

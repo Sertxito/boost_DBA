@@ -41,12 +41,12 @@
   "author": "Sergio Hierro Cinos",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sertxito/boostDBA.git"
+    "url": "git+https://github.com/Sertxito/boost_DBA.git"
   },
   "bugs": {
-    "url": "https://github.com/Sertxito/boostDBA/issues"
+    "url": "https://github.com/Sertxito/boost_DBA/issues"
   },
-  "homepage": "https://github.com/Sertxito/boostDBA#readme",
+  "homepage": "https://github.com/Sertxito/boost_DBA#readme",
   "license": "MIT",
   "engines": {
     "node": ">=20"
