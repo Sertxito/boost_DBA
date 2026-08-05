@@ -6,6 +6,53 @@
 
 Boost DBA 360 es un **sistema agentico de IA** para operar, diagnosticar, optimizar y modernizar bases de datos SQL Server sin exfiltrar información sensible. Combina 18 agentes especializados con 19 skills reutilizables y una capa de conocimiento anti-alucinación para responder las preguntas clave de rendimiento, riesgo y evolución.
 
+## Historia resumida
+
+Boost DBA 360 no nace como un framework teorico: nace de operaciones DBA reales en entornos legacy de SQL Server.
+
+1. Primero fue un playbook de auditoria y recuperacion de conocimiento para SP legacy.
+2. Despues se consolidaron patrones de deuda tecnica repetidos (dependencias implicitas, parameter sniffing, transacciones abiertas, etc.).
+3. Luego evoluciono a sistema agentico (Lean/Full) para reducir friccion diaria y acelerar diagnosticos.
+4. Finalmente se endurecio el onboarding con compuerta de anonimización para evitar fugas de datos en reportes y entregables.
+
+## Instalación real (GitHub y npm)
+
+Hay dos rutas recomendadas:
+
+### Ruta 1: instalar desde npm
+
+```bash
+npm install --save-dev mcpee-dba
+node -e "const fs=require('fs'); const p='node_modules/mcpee-dba/mcpee.json'; console.log(fs.existsSync(p)?'OK':'ERROR');"
+```
+
+### Ruta 2: clonar desde GitHub y ejecutar scripts
+
+```bash
+git clone https://github.com/Sertxito/boostDBA.git
+cd boostDBA
+npm install
+npm run quality
+```
+
+Primera inicializacion de proyecto:
+
+```powershell
+pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "C:\ruta\schema" -Anonymize ask
+```
+
+Si necesitas ejecucion no interactiva:
+
+```powershell
+pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "C:\ruta\schema" -Anonymize yes
+```
+
+Requisitos minimos:
+
+- Node.js 20+
+- PowerShell 7+
+- SQL Server 2019+ (para casos con fuente real)
+
 ## Modo de Operación Recomendado
 
 Para el día a día no hace falta activar todos los agentes.
