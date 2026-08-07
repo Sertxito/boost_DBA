@@ -3,56 +3,95 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub Repo](https://img.shields.io/badge/repo-boostDBA-blue)](https://github.com/Sertxito/boostDBA)
 
-> Boost DBA 360 — Sistema Agentico para SQL Server: Análisis, Diagnóstico, Optimización & Modernización
+Boost DBA 360 es un paquete de conocimiento operativo para SQL Server: agentes, skills, patrones y plantillas para analizar, estabilizar y modernizar bases de datos heredadas sin exfiltrar datos sensibles.
 
-## Overview
+> Esta README se usa tanto en GitHub como en npm.
 
-Sistema agentico completo para operar, auditar y modernizar SQL Server **sin exfiltración de datos sensibles**. 18 agentes especializados + 19 skills para DBA operations, performance troubleshooting, security audits, y planificación de modernización.
+## Historia del proyecto
 
-### Key Features
+Boost DBA 360 nace de un problema repetido en equipos de datos: bases SQL Server con 10-15 anos de deuda tecnica, sin documentacion confiable y con alto riesgo en cada cambio.
 
-- ✅ **18 Agentes Especializados** — Index Expert, Query Analyzer, Security Auditor, Modernization Planner
-- ✅ **19 Skills Alineados** — Cada skill mapea a un dominio específico de SQL
-- ✅ **Modes Lean & Full** — Lean (orquestador + analizador + reportes); Full (auditorías amplias)
-- ✅ **Anonimización Obligatoria** — Wizard con ask/yes/no para proteger datos sensibles
-- ✅ **Detección de Deuda Técnica** — Dependencias ocultas, índices no usados, queries lentas
-- ✅ **Análisis de Riesgo** — Predice riesgos antes de cambios
-- ✅ **Base de Conocimiento** — Respuestas fundamentadas contra almacén alineado
+Evolucion resumida:
 
-## Quick Start
+1. Inicio como playbook interno para auditorias DBA y analisis de riesgo en cambios.
+2. Estandarizacion de patrones recurrentes (dependencias ocultas, parameter sniffing, cursores, transacciones sin cierre).
+3. Conversion a sistema agentico con modos Lean y Full para reducir coste operativo diario.
+4. Endurecimiento de seguridad con flujo de anonimización desde onboarding para evitar fuga de datos en artefactos.
+5. Publicacion como paquete reusable (mcpee-dba) para facilitar adopcion en otros workspaces.
 
-### Prerequisites
+## Que incluye
 
-- SQL Server 2019+
-- .NET 8 runtime
-- GitHub Copilot customizations enabled
+- 18 agentes especializados para analisis de dependencias, rendimiento, seguridad, mantenimiento, HA y modernizacion.
+- 19 skills reutilizables para tareas tecnicas concretas.
+- Patrones y templates listos para reportes, planes y migracion.
+- Scripts PowerShell para onboarding, preflight, diagnostico y export.
+- Instrucciones auto-descubribles para MCPEE Core (SQL, archivos DBA operativos y prompts/evals).
 
-### Installation
+## Instalacion real
+
+Hay dos formas de usarlo, segun tu caso.
+
+### Opcion A: consumo desde npm (reutilizar el paquete)
+
+Recomendado cuando ya tienes tu entorno y solo quieres incorporar el catalogo DBA.
+
+```bash
+npm install --save-dev mcpee-dba
+```
+
+Verificacion minima:
+
+```bash
+node -e "const fs=require('fs'); const p='node_modules/mcpee-dba/mcpee.json'; console.log(fs.existsSync(p)?'OK: mcpee.json encontrado':'ERROR: paquete no instalado');"
+```
+
+### Opcion B: uso desde GitHub (operar y contribuir)
+
+Recomendado si vas a ejecutar scripts del repo, personalizar agentes/skills o contribuir.
 
 ```bash
 git clone https://github.com/Sertxito/boostDBA.git
 cd boostDBA
-# See INSTALL.md for full setup
+npm install
+npm run quality
 ```
 
-### Usage (Lean Mode — Recommended)
+Inicializa un workspace DBA 360 real:
 
-```bash
-# 1. Load orquestador agent
-# 2. Connect to SQL Server
-# 3. Run audit
-# 4. Review reports
+```powershell
+pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "C:\ruta\schema" -Anonymize ask
 ```
 
-## Documentation
+Alternativa no interactiva para pipelines:
 
-- [Boost DBA 360 Guide](docs/README.md)
+```powershell
+pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "C:\ruta\schema" -Anonymize yes
+```
+
+## Requisitos
+
+- Node.js 20 o superior.
+- PowerShell 7 o superior (para scripts en scripts/).
+- SQL Server 2019 o superior si vas a ejecutar analisis contra workloads reales.
+
+## Primer uso recomendado
+
+1. Ejecuta el wizard de onboarding (crea workspaces/<Proyecto>/ y fuente de verdad).
+2. Revisa el resultado del preflight de seguridad.
+3. Comienza en modo Lean (orquestador + dependencias + reporte ejecutivo).
+4. Activa agentes extra solo cuando haya trigger claro.
+
+## Documentacion
+
+- [Guia completa Boost DBA 360](docs/README.md)
 - [Agent Behavioral Spec](specs/agent-behavioral-spec.md)
 - [Session Framing Guide](specs/session-framing-guide.md)
-- [Skills Catalog](skills/)
-- [Agents Catalog](agents/)
+- [Catalogo de agentes](agents/)
+- [Catalogo de skills](skills/)
+- [Catalogo de prompts](prompts/)
+- [Catalogo de evaluaciones](evals/)
+- [Patrones de deuda tecnica](patterns/README.md)
 
-## License
+## Licencia
 
-MIT — See [LICENSE](LICENSE)
-
+MIT. Ver [LICENSE](LICENSE).

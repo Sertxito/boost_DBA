@@ -1,0 +1,33 @@
+{
+  "id": "performance-bottleneck-diagnosis-baseline",
+  "prompt": "prompts/performance-bottleneck-diagnosis.prompt.md",
+  "scenario": "cpu-spike-and-blocking",
+  "input": {
+    "window": "2026-08-06T08:00:00Z/2026-08-06T10:00:00Z",
+    "symptom": "CPU al 92% y timeout intermitente",
+    "evidence": {
+      "topWaits": ["CXPACKET", "PAGEIOLATCH_SH", "LCK_M_X"],
+      "topQueries": ["sp_GenerateInvoice", "sp_RebuildSnapshots"],
+      "blockingSessions": ["54->71", "62->88"]
+    },
+    "constraints": "no reinicios en horario laboral"
+  },
+  "acceptanceCriteria": {
+    "mustInclude": [
+      "symptomSummary",
+      "evidence",
+      "rootCauseHypotheses",
+      "prioritizedActions",
+      "validationPlan"
+    ],
+    "mustMention": [
+      "baseline",
+      "rollback",
+      "prioridad"
+    ],
+    "mustNotInclude": [
+      "secret",
+      "password"
+    ]
+  }
+}

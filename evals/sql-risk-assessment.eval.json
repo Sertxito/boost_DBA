@@ -1,0 +1,37 @@
+{
+  "id": "sql-risk-assessment-baseline",
+  "prompt": "prompts/sql-risk-assessment.prompt.md",
+  "scenario": "index-change-with-read-write-tradeoff",
+  "input": {
+    "changeSummary": "Agregar indice no cluster sobre Sales.Orders(CustomerId, CreatedAt)",
+    "sqlSnippet": "CREATE INDEX IX_Orders_CustomerId_CreatedAt ON Sales.Orders(CustomerId, CreatedAt);",
+    "knownDependencies": [
+      "sp_GetOrdersByCustomer",
+      "Job_Nightly_OrderAggregation",
+      "API /orders"
+    ],
+    "deploymentWindow": "Domingo 02:00-03:00 UTC",
+    "availabilityRequirement": "SLO 99.95%"
+  },
+  "acceptanceCriteria": {
+    "mustInclude": [
+      "executiveSummary",
+      "riskBySeverity",
+      "impactAssessment",
+      "mitigationPlan",
+      "rollbackPlan",
+      "validationPlan",
+      "humanApprovalRequired"
+    ],
+    "mustMention": [
+      "trade-off lectura/escritura",
+      "validacion post despliegue",
+      "rollback"
+    ],
+    "mustNotInclude": [
+      "password",
+      "connection string",
+      "dato sensible"
+    ]
+  }
+}

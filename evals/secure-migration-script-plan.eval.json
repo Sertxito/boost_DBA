@@ -1,0 +1,31 @@
+{
+  "id": "secure-migration-script-plan-baseline",
+  "prompt": "prompts/secure-migration-script-plan.prompt.md",
+  "scenario": "add-not-null-column-with-backfill",
+  "input": {
+    "changeDescription": "Agregar columna IsPriority BIT NOT NULL en Sales.Orders",
+    "dataVolume": "18M filas",
+    "environments": ["dev", "stage", "prod"],
+    "maintenanceWindow": "Domingo 01:00-01:45 UTC",
+    "dependencies": ["sp_CreateOrder", "sp_UpdateOrder", "ETL_OrderExport"]
+  },
+  "acceptanceCriteria": {
+    "mustIncludeSections": [
+      "Alcance del cambio",
+      "Prechecks",
+      "Plan de rollout",
+      "Plan de postchecks",
+      "Plan de rollback",
+      "Matriz Go/No-Go",
+      "Riesgos residuales"
+    ],
+    "mustMention": [
+      "aprobacion humana",
+      "criterio de corte",
+      "rollback"
+    ],
+    "mustNotInclude": [
+      "borrado irreversible sin mitigacion"
+    ]
+  }
+}

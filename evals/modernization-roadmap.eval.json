@@ -1,0 +1,39 @@
+{
+  "id": "modernization-roadmap-baseline",
+  "prompt": "prompts/modernization-roadmap.prompt.md",
+  "scenario": "legacy-sql-modernization-12-months",
+  "input": {
+    "currentState": {
+      "technicalDebt": "alta",
+      "coupling": "alto acoplamiento en 220 SPs",
+      "documentation": "incompleta",
+      "availabilityGaps": "sin replica secundaria"
+    },
+    "businessGoals": [
+      "reducir incidentes criticos 50%",
+      "acelerar releases de 1/mes a 1/semana"
+    ],
+    "constraints": {
+      "teamSize": 4,
+      "budgetLevel": "medio",
+      "horizon": "12 meses"
+    }
+  },
+  "acceptanceCriteria": {
+    "mustInclude": [
+      "executiveSummary",
+      "waves",
+      "kpis",
+      "governance"
+    ],
+    "mustMention": [
+      "compuertas de decision",
+      "aprobacion humana",
+      "riesgos por ola"
+    ],
+    "mustNotInclude": [
+      "big-bang",
+      "sin rollback"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "dependency-impact-analysis-baseline",
+  "prompt": "prompts/dependency-impact-analysis.prompt.md",
+  "scenario": "rename-table-high-coupling",
+  "input": {
+    "change": "Renombrar tabla dbo.Users a dbo.Customers",
+    "affectedObjects": ["dbo.Users"],
+    "knownDependencies": [
+      "sp_GetUserProfile",
+      "vw_UserBilling",
+      "Job_NightlyUserSync",
+      "API /users"
+    ],
+    "deploymentWindow": "Sabado 01:00-02:00 UTC"
+  },
+  "acceptanceCriteria": {
+    "mustIncludeSections": [
+      "Resumen ejecutivo",
+      "Dependencias directas",
+      "Dependencias transitivas",
+      "Nivel de riesgo",
+      "Plan de pruebas",
+      "Plan de rollback",
+      "Decision sugerida"
+    ],
+    "mustMention": [
+      "riesgo alto o critico",
+      "validaciones",
+      "rollback"
+    ],
+    "mustNotInclude": [
+      "credenciales",
+      "datos sensibles"
+    ]
+  }
+}
