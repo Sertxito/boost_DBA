@@ -1,0 +1,31 @@
+{
+  "id": "dba360-intake-triage-baseline",
+  "prompt": "prompts/dba360-intake-triage.prompt.md",
+  "scenario": "prod-blocking-incident",
+  "input": {
+    "incidentContext": "Desde las 09:10 UTC, el endpoint de facturacion presenta timeout en 40% de solicitudes.",
+    "environment": "prod",
+    "symptom": "bloqueos y latencia elevada",
+    "businessImpact": "facturacion degradada",
+    "constraints": "sin downtime fuera de ventana de emergencia"
+  },
+  "acceptanceCriteria": {
+    "mustInclude": [
+      "triage",
+      "first24hPlan",
+      "skillsToActivate",
+      "riskControls",
+      "humanApprovalRequired"
+    ],
+    "mustMention": [
+      "severity",
+      "lean o full",
+      "evidencia"
+    ],
+    "mustNotInclude": [
+      "password",
+      "connection string",
+      "datos productivos literales"
+    ]
+  }
+}

@@ -25,6 +25,7 @@ Evolucion resumida:
 - 19 skills reutilizables para tareas tecnicas concretas.
 - Patrones y templates listos para reportes, planes y migracion.
 - Scripts PowerShell para onboarding, preflight, diagnostico y export.
+- Instrucciones auto-descubribles para MCPEE Core (SQL, archivos DBA operativos y prompts/evals).
 
 ## Instalacion real
 
@@ -87,6 +88,8 @@ pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "
 - [Session Framing Guide](specs/session-framing-guide.md)
 - [Catalogo de agentes](agents/)
 - [Catalogo de skills](skills/)
+- [Catalogo de prompts](prompts/)
+- [Catalogo de evaluaciones](evals/)
 - [Patrones de deuda tecnica](patterns/README.md)
 
 ## Licencia

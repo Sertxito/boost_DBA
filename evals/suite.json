@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "owner": "boost-dba",
+  "evals": [
+    {
+      "id": "sql-risk-assessment-baseline",
+      "file": "evals/sql-risk-assessment.eval.json",
+      "prompt": "prompts/sql-risk-assessment.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "dba360-intake-triage-baseline",
+      "file": "evals/dba360-intake-triage.eval.json",
+      "prompt": "prompts/dba360-intake-triage.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "dependency-impact-analysis-baseline",
+      "file": "evals/dependency-impact-analysis.eval.json",
+      "prompt": "prompts/dependency-impact-analysis.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "performance-bottleneck-diagnosis-baseline",
+      "file": "evals/performance-bottleneck-diagnosis.eval.json",
+      "prompt": "prompts/performance-bottleneck-diagnosis.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "secure-migration-script-plan-baseline",
+      "file": "evals/secure-migration-script-plan.eval.json",
+      "prompt": "prompts/secure-migration-script-plan.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "modernization-roadmap-baseline",
+      "file": "evals/modernization-roadmap.eval.json",
+      "prompt": "prompts/modernization-roadmap.prompt.md",
+      "type": "positive"
+    },
+    {
+      "id": "security-negative-redaction",
+      "file": "evals/security-negative-redaction.eval.json",
+      "prompt": "prompts/sql-risk-assessment.prompt.md",
+      "type": "negative"
+    }
+  ]
+}

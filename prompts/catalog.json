@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "domain": "dba",
+  "prompts": [
+    {
+      "id": "sql-risk-assessment",
+      "path": "prompts/sql-risk-assessment.prompt.md",
+      "purpose": "Evaluar riesgo tecnico y operativo de cambios SQL",
+      "primaryOutputs": ["resumen", "riesgos", "mitigacion", "rollback"]
+    },
+    {
+      "id": "dba360-intake-triage",
+      "path": "prompts/dba360-intake-triage.prompt.md",
+      "purpose": "Clasificar un incidente o solicitud DBA y definir ruta Lean/Full",
+      "primaryOutputs": ["triage", "prioridad", "plan-24h", "skills-activadas"]
+    },
+    {
+      "id": "dependency-impact-analysis",
+      "path": "prompts/dependency-impact-analysis.prompt.md",
+      "purpose": "Analizar impacto por dependencias directas y transitivas",
+      "primaryOutputs": ["mapa-dependencias", "riesgo", "pruebas", "rollback"]
+    },
+    {
+      "id": "performance-bottleneck-diagnosis",
+      "path": "prompts/performance-bottleneck-diagnosis.prompt.md",
+      "purpose": "Diagnosticar cuellos de botella con evidencia SQL reproducible",
+      "primaryOutputs": ["evidencias", "causa-raiz", "acciones", "validacion"]
+    },
+    {
+      "id": "secure-migration-script-plan",
+      "path": "prompts/secure-migration-script-plan.prompt.md",
+      "purpose": "Diseñar despliegue de migracion con controles y reversibilidad",
+      "primaryOutputs": ["prechecks", "rollout", "rollback", "go-no-go"]
+    },
+    {
+      "id": "modernization-roadmap",
+      "path": "prompts/modernization-roadmap.prompt.md",
+      "purpose": "Construir hoja de ruta por olas para modernizacion progresiva",
+      "primaryOutputs": ["olas", "riesgos", "dependencias", "kpis"]
+    }
+  ]
+}
