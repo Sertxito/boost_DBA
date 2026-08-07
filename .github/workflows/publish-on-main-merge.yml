@@ -3,6 +3,7 @@ name: Release
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -30,6 +31,15 @@ jobs:
 
       - name: Validate quality gates
         run: npm run quality
+
+      - name: Verify npm token
+        run: |
+          if [ -z "${NPM_TOKEN}" ]; then
+            echo "NPM_TOKEN secret is missing. Configure repository secret NPM_TOKEN before releasing."
+            exit 1
+          fi
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Run semantic release
         run: npm run release

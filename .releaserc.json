@@ -14,7 +14,6 @@
         "preset": "conventionalcommits"
       }
     ],
-    "@semantic-release/changelog",
     [
       "@semantic-release/npm",
       {
