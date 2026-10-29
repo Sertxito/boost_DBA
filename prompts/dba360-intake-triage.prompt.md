@@ -1,3 +1,7 @@
+---
+description: 'Clasificar solicitudes/incidentes DBA y producir un plan de accion de 24h alineado con modo Lean o Full.'
+---
+
 # DBA 360 Intake and Triage Prompt
 
 ## Objective

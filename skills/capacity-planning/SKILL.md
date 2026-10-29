@@ -1,5 +1,5 @@
 ---
-name: 'Capacity Planning y Proyecciones de Crecimiento'
+name: capacity-planning
 description: 'Skill para analizar tendencias de crecimiento y proyectar necesidades de almacenamiento y recursos'
 ---
 

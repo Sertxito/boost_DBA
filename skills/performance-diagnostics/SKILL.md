@@ -1,5 +1,5 @@
 ---
-name: 'Diagnostico de Rendimiento SQL Server'
+name: performance-diagnostics
 description: 'Skill para detectar cuellos de botella con DMVs y Query Store'
 ---
 

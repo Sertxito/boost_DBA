@@ -1,5 +1,5 @@
 ---
-name: 'Generación de Scripts de Migración Seguros'
+name: migration-scripting
 description: 'Skill para producir scripts DDL/DML con rollback, validaciones y plan de despliegue por entornos'
 ---
 

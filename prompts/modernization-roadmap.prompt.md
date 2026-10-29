@@ -1,3 +1,7 @@
+---
+description: 'Construir hoja de ruta de modernizacion de legado SQL por olas, con riesgo controlado y continuidad operativa.'
+---
+
 # Modernization Roadmap Prompt
 
 ## Objective

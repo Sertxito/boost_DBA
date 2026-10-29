@@ -1,5 +1,5 @@
 ---
-name: 'Monitorización y Baseline de Rendimiento'
+name: monitoring-baseline
 description: 'Skill para establecer baseline de comportamiento normal y detectar desviaciones en SQL Server'
 ---
 

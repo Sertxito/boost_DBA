@@ -1,5 +1,5 @@
 ---
-name: 'Análisis de Jobs y Automatización SQL Agent'
+name: jobs-automation
 description: 'Skill para auditar SQL Agent jobs, detectar fallos y optimizar schedules'
 ---
 

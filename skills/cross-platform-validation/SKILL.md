@@ -1,5 +1,5 @@
 ---
-name: 'Validación Cross-Platform y Referencias Oficiales'
+name: cross-platform-validation
 description: 'Skill para contrastar recomendaciones con documentación oficial y mapear equivalencias entre plataformas de base de datos'
 ---
 

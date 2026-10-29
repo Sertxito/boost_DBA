@@ -1,3 +1,7 @@
+---
+description: 'Evaluar impacto de un cambio SQL identificando dependencias directas/transitivas y riesgo operativo.'
+---
+
 # Dependency Impact Analysis Prompt
 
 ## Objective

@@ -1,3 +1,8 @@
+---
+name: sql-anonymization
+description: 'This skill anonymizes SQL Server export files using **dynamic discovery** instead of fixed lists. It does not assume database names, users, schemas, or organization codes ahead of time.'
+---
+
 # SQL Anonymization Skill
 
 **Version:** 2.0  

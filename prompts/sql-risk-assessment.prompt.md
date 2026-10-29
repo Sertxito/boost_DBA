@@ -1,3 +1,7 @@
+---
+description: 'Evaluar un cambio SQL antes de despliegue para estimar riesgo tecnico, operativo y de seguridad, con mitigaciones accionables.'
+---
+
 # SQL Risk Assessment Prompt
 
 ## Objective
