@@ -1,5 +1,5 @@
 ---
-name: 'Security Loop Continuo'
+name: security-loop
 description: 'Skill de validación de seguridad embebida en cada ciclo de análisis: no solo en onboarding sino en cada recomendación y salida'
 ---
 

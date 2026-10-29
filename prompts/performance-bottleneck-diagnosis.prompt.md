@@ -1,3 +1,7 @@
+---
+description: 'Diagnosticar degradaciones de rendimiento SQL Server con evidencia reproducible y priorizacion accionable.'
+---
+
 # Performance Bottleneck Diagnosis Prompt
 
 ## Objective

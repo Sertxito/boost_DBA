@@ -1,5 +1,5 @@
 ---
-name: 'Optimizacion de Consultas y Planes'
+name: query-optimization
 description: 'Skill para tuning de consultas, planes e indices con pruebas de regresion'
 ---
 

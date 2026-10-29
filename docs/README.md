@@ -22,8 +22,8 @@ Hay dos rutas recomendadas:
 ### Ruta 1: instalar desde npm
 
 ```bash
-npm install --save-dev mcpee-dba
-node -e "const fs=require('fs'); const p='node_modules/mcpee-dba/mcpee.json'; console.log(fs.existsSync(p)?'OK':'ERROR');"
+npm install --save-dev boost-dba
+node -e "const fs=require('fs'); const p='node_modules/boost-dba/boost.json'; console.log(fs.existsSync(p)?'OK':'ERROR');"
 ```
 
 ### Ruta 2: clonar desde GitHub y ejecutar scripts

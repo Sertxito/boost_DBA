@@ -1,3 +1,7 @@
+---
+description: 'Diseñar un plan de migracion SQL seguro y reversible con prechecks, rollout, postchecks y rollback.'
+---
+
 # Secure Migration Script Plan Prompt
 
 ## Objective

@@ -1,6 +1,6 @@
 ---
 description: "Guia para metadatos raiz del paquete y documentos de gobierno del repo."
-applyTo: "{README.md,CHANGELOG.md,CONTRIBUTING.md,package.json,mcpee.json,platform.json,.releaserc.json,.markdownlint.json}"
+applyTo: "{README.md,CHANGELOG.md,CONTRIBUTING.md,package.json,boost.json,platform.json,.releaserc.json,.markdownlint.json}"
 ---
 
 # Repository Metadata Guardrails

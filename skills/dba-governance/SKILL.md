@@ -1,5 +1,5 @@
 ---
-name: 'Gobierno DBA: Seguridad y Fiabilidad'
+name: dba-governance
 description: 'Skill para revisar hardening, permisos, backup/restore y continuidad operativa'
 ---
 

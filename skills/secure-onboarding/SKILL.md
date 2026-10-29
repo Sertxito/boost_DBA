@@ -1,5 +1,5 @@
 ---
-name: 'Onboarding Seguro y Fuente de Verdad'
+name: secure-onboarding
 description: 'Skill para arrancar un proyecto de BBDD desde cero con seguridad-first y fuente de verdad local'
 ---
 

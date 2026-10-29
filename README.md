@@ -1,7 +1,7 @@
-# boostDBA
+# boost_DBA
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub Repo](https://img.shields.io/badge/repo-boostDBA-blue)](https://github.com/Sertxito/boostDBA)
+[![GitHub Repo](https://img.shields.io/badge/repo-boost_DBA-blue)](https://github.com/Sertxito/boost_DBA)
 
 Boost DBA 360 es un paquete de conocimiento operativo para SQL Server: agentes, skills, patrones y plantillas para analizar, estabilizar y modernizar bases de datos heredadas sin exfiltrar datos sensibles.
 
@@ -17,7 +17,7 @@ Evolucion resumida:
 2. Estandarizacion de patrones recurrentes (dependencias ocultas, parameter sniffing, cursores, transacciones sin cierre).
 3. Conversion a sistema agentico con modos Lean y Full para reducir coste operativo diario.
 4. Endurecimiento de seguridad con flujo de anonimización desde onboarding para evitar fuga de datos en artefactos.
-5. Publicacion como paquete reusable (mcpee-dba) para facilitar adopcion en otros workspaces.
+5. Publicacion como paquete reusable (boost-dba) para facilitar adopcion en otros workspaces.
 
 ## Que incluye
 
@@ -25,33 +25,37 @@ Evolucion resumida:
 - 19 skills reutilizables para tareas tecnicas concretas.
 - Patrones y templates listos para reportes, planes y migracion.
 - Scripts PowerShell para onboarding, preflight, diagnostico y export.
-- Instrucciones auto-descubribles para MCPEE Core (SQL, archivos DBA operativos y prompts/evals).
+- Instrucciones auto-descubribles por Copilot (SQL, archivos DBA operativos y prompts/evals).
 
-## Instalacion real
+## Instalacion
 
-Hay dos formas de usarlo, segun tu caso.
-
-### Opcion A: consumo desde npm (reutilizar el paquete)
-
-Recomendado cuando ya tienes tu entorno y solo quieres incorporar el catalogo DBA.
+Este boost es **autocontenido**: no necesita runtime, plugin ni servidor MCP. Un solo comando copia sus activos a las rutas donde GitHub Copilot / VS Code los descubren automaticamente.
 
 ```bash
-npm install --save-dev mcpee-dba
+# Desde la raiz de TU proyecto
+npx github:Sertxito/boost_DBA
+# o, una vez publicado en npm
+npx boost-dba
 ```
 
-Verificacion minima:
+| Activo | Se instala en |
+|---|---|
+| Agentes | `.github/agents/*.agent.md` |
+| Skills | `.github/skills/<nombre>/SKILL.md` y `.agents/skills/<nombre>/SKILL.md` |
+| Prompts | `.github/prompts/*.prompt.md` |
+| Instrucciones | `.github/instructions/*.instructions.md` |
+| Instrucciones globales | `.github/copilot-instructions.md` (solo si el proyecto no tiene) |
+
+Opciones: `--target <dir>`, `--force` (sobrescribir), `--dry-run`, `--no-agents-dir` (omite `.agents/skills`), `--check` (verifica la instalacion), `--uninstall`.
+Nunca se sobrescriben archivos existentes sin `--force`, asi que varios boosts conviven en el mismo proyecto.
+
+**Verifica:** ejecuta `npx boost-dba --check`, recarga VS Code (`Developer: Reload Window`) y escribe `@` en Copilot Chat (agentes), `/` (prompts) y abre el selector de skills.
+
+### Para contribuir
 
 ```bash
-node -e "const fs=require('fs'); const p='node_modules/mcpee-dba/mcpee.json'; console.log(fs.existsSync(p)?'OK: mcpee.json encontrado':'ERROR: paquete no instalado');"
-```
-
-### Opcion B: uso desde GitHub (operar y contribuir)
-
-Recomendado si vas a ejecutar scripts del repo, personalizar agentes/skills o contribuir.
-
-```bash
-git clone https://github.com/Sertxito/boostDBA.git
-cd boostDBA
+git clone https://github.com/Sertxito/boost_DBA.git
+cd boost_DBA
 npm install
 npm run quality
 ```
@@ -95,3 +99,12 @@ pwsh -File scripts/run-dba360-wizard.ps1 -ProjectName "MiProyecto" -SchemaPath "
 ## Licencia
 
 MIT. Ver [LICENSE](LICENSE).
+
+## Naming and collisions
+
+Installed assets are prefixed with `dba-` (e.g. `.github/agents/dba-<name>.agent.md`, `.github/skills/dba-<name>/`) so several boosts can live in the same project, and internal references are rewritten to match.
+
+- Nothing that already exists in the target is overwritten: each ignored file is reported with a `[WARN] ... already existed ... IGNORED` message. Use `--force` to overwrite.
+- An existing `.github/copilot-instructions.md` is kept; the boost's global guidance is installed as `dba-global.instructions.md` instead.
+- Re-running the installer is safe; `--check` and `--uninstall` work from the manifest.
+

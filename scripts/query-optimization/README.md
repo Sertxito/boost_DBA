@@ -1,4 +1,4 @@
-﻿# Marco de Optimizacion de Consultas â€” ProjectName
+# Marco de Optimizacion de Consultas â€” ProjectName
 
 **Alcance:** 6.554 SPs | SQL Server 2017 | stack .NET 8 Dapper/EF  
 **Objetivo:** Reducir tiempo de respuesta y consumo de recursos sin cambios funcionales
@@ -24,7 +24,7 @@
 ### Optimizar un SP paso a paso
 
 ```powershell
-cd c:\repo\BoostDBA
+cd c:\repo\boost_DBA
 
 # 1. Captura archivo golden (resultado esperado) en PROD
 .\scripts\query-optimization\03-golden-file-regression.ps1 `

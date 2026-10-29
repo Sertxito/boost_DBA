@@ -1,5 +1,5 @@
 ---
-name: 'Alta Disponibilidad y Recuperación ante Desastres'
+name: high-availability
 description: 'Skill para evaluar el estado de HA/DR en SQL Server: AlwaysOn, replicación, log shipping y failover'
 ---
 

@@ -24,7 +24,7 @@ Contributions must preserve internal alignment across these artifact families.
 npm run quality
 ```
 
-1. If adding or changing capabilities, verify `platform.json` and `mcpee.json` references remain valid.
+1. If adding or changing capabilities, verify `platform.json` and `boost.json` references remain valid.
 1. Submit a PR with:
 - change summary,
 - impacted capabilities,
@@ -46,13 +46,13 @@ When changing a capability domain, keep these assets aligned:
 - `patterns/*` if anti-pattern coverage changes
 - `templates/*` if output shape changes
 - `platform.json` agent/skill registry
-- `mcpee.json` package catalog
+- `boost.json` package catalog
 
 ## Validation Gates
 
 `npm run quality` currently verifies:
 
-- JSON metadata integrity (`mcpee.json` and `platform.json`).
+- JSON metadata integrity (`boost.json` and `platform.json`).
 
 Do not open a PR if any gate fails.
 

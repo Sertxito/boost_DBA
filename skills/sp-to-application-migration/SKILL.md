@@ -1,5 +1,5 @@
 ---
-name: 'Migración de Stored Procedures a Capa de Aplicación'
+name: sp-to-application-migration
 description: 'Skill para extraer lógica de negocio de SPs a C#/.NET, aplicando Strangler Fig, DDD y patrones de anti-corrupción'
 ---
 

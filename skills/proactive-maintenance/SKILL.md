@@ -1,5 +1,5 @@
 ---
-name: 'Mantenimiento Proactivo de Índices y Estadísticas'
+name: proactive-maintenance
 description: 'Skill para detectar fragmentación, estadísticas obsoletas e índices problemáticos en SQL Server'
 ---
 

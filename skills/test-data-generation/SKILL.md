@@ -1,5 +1,5 @@
 ---
-name: 'Generación de Datos de Prueba Seguros'
+name: test-data-generation
 description: 'Skill para generar datos sintéticos realistas y anonimizar subconjuntos de producción para testing'
 ---
 

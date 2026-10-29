@@ -1,5 +1,5 @@
 ---
-name: 'Human-in-the-Loop — Compuerta de Decisión Humana'
+name: human-in-the-loop
 description: 'Define qué acciones requieren aprobación humana explícita antes de proceder y qué pueden ejecutar los agentes de forma autónoma'
 ---
 

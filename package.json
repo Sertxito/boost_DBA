@@ -1,15 +1,14 @@
 {
-  "name": "mcpee-dba",
+  "name": "boost-dba",
   "version": "0.1.0",
   "description": "Boost DBA 360: agents, skills, specs, patterns and templates for expert SQL Server operations and modernization.",
   "type": "module",
-  "main": "index.js",
   "exports": {
-    ".": "./index.js",
-    "./mcpee": "./mcpee.json"
+    "./boost.json": "./boost.json",
+    "./package.json": "./package.json"
   },
   "files": [
-    "mcpee.json",
+    "boost.json",
     "platform.json",
     "instructions",
     "agents",
@@ -26,21 +25,25 @@
     "LICENSE"
   ],
   "scripts": {
-    "validate:json": "node -e \"const fs=require('fs'); JSON.parse(fs.readFileSync('mcpee.json','utf8')); JSON.parse(fs.readFileSync('platform.json','utf8')); console.log('JSON metadata OK');\"",
+    "validate:json": "node -e \"const fs=require('fs'); JSON.parse(fs.readFileSync('boost.json','utf8')); JSON.parse(fs.readFileSync('platform.json','utf8')); console.log('JSON metadata OK');\"",
     "validate:prompts-evals": "node -e \"const fs=require('fs'); const read=(p)=>JSON.parse(fs.readFileSync(p,'utf8')); const catalog=read('prompts/catalog.json'); const suite=read('evals/suite.json'); for (const p of catalog.prompts||[]) { if (!fs.existsSync(p.path)) throw new Error('Missing prompt: '+p.path); } for (const s of suite.evals||[]) { if (!fs.existsSync(s.file)) throw new Error('Missing eval: '+s.file); const ev=read(s.file); if (!ev.prompt) throw new Error('Eval without prompt: '+s.file); if (!fs.existsSync(ev.prompt)) throw new Error('Eval references missing prompt: '+ev.prompt); } console.log('Prompts/Evals OK');\"",
     "quality": "npm run validate:json && npm run validate:prompts-evals",
     "release": "semantic-release",
-    "release:dry": "semantic-release --dry-run"
+    "release:dry": "semantic-release --dry-run",
+    "boost:install": "node scripts/install.mjs",
+    "boost:check": "node scripts/install.mjs --check"
   },
   "keywords": [
-    "mcpee",
     "boost",
     "dba",
     "sql-server",
     "modernization",
     "agents",
     "skills",
-    "specs"
+    "specs",
+    "copilot",
+    "github-copilot",
+    "agent-skills"
   ],
   "author": "Sergio Hierro Cinos",
   "repository": {
@@ -58,14 +61,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@mcpee/core": "^0.1.0"
-  },
-  "peerDependenciesMeta": {
-    "@mcpee/core": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -75,5 +70,8 @@
     "@semantic-release/release-notes-generator": "^12.1.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "semantic-release": "^24.2.7"
+  },
+  "bin": {
+    "boost-dba": "scripts/install.mjs"
   }
 }
